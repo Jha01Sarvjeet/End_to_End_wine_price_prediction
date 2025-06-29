@@ -10,3 +10,9 @@ class DataIngestionConfig:
     unzip_dir: Path
 
 
+@dataclass
+class DataValidationConfig:
+    root_dir: Path
+    unzip_data_dir: str
+    STATUS_FILE: Path
+    all_schema: dict
