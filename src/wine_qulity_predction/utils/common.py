@@ -4,14 +4,15 @@ import yaml
 from src.wine_qulity_predction import logger
 import json
 import joblib
-from ensure import ensure_annotation
+from ensure import ensure_annotations
 from box import ConfigBox
 from pathlib import Path
 from typing import Any
+from box.exceptions import BoxValueError
 
 
 
-@ensure_annotation  
+@ensure_annotations
 def read_yaml(path_to_yaml:Path) -> ConfigBox:
     """
     reads Yaml file and return
@@ -38,7 +39,7 @@ def read_yaml(path_to_yaml:Path) -> ConfigBox:
         raise e
 
 
-@ensure_annotation
+@ensure_annotations
 def create_directories(path_to_directories:list,verbose = True):
     '''
     create list of directories
@@ -54,7 +55,7 @@ def create_directories(path_to_directories:list,verbose = True):
             logger.info("Created directory at {path}")
 
 
-@ensure_annotation
+@ensure_annotations
 def save_json(path: Path,data: dict):
     '''
     save json
@@ -70,7 +71,7 @@ def save_json(path: Path,data: dict):
     logger.info(f'json file saved at {path}')
 
 
-@ensure_annotation
+@ensure_annotations
 def load_json(path:Path)->ConfigBox:
      """load json files data
 
@@ -87,7 +88,7 @@ def load_json(path:Path)->ConfigBox:
      return ConfigBox(content)
 
 
-@ensure_annotation
+@ensure_annotations
 def save_bin(data:Any,path:Path):
 
     """save binary file
@@ -101,7 +102,7 @@ def save_bin(data:Any,path:Path):
 
 
 
-@ensure_annotation
+@ensure_annotations
 def laod_bin(data:Any,path:Path)->Any:
 
     """load binary file
