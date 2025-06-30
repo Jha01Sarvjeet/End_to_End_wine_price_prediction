@@ -2,7 +2,8 @@ from src.wine_qulity_predction.constants import *
 from src.wine_qulity_predction.utils.common import read_yaml, create_directories
 from src.wine_qulity_predction.entity.config_entity import (DataIngestionConfig,
                                                             DataValidationConfig,
-                                                            DataTransformationConfig)
+                                                            DataTransformationConfig,
+                                                            ModelTrainingConfig)
 
 class ConfiguarationManager:
     def __init__(self,
@@ -31,7 +32,7 @@ class ConfiguarationManager:
     
     def get_data_validation_config(self) ->DataValidationConfig:
         config=self.config.data_validation
-        schema=self.params.COLUMNS
+        schema=self.schema.COLUMNS
 
         create_directories([config.root_dir])
 
@@ -56,3 +57,20 @@ class ConfiguarationManager:
         
 
         return data_transformation_config
+
+    def get_model_trainer_config(self) -> ModelTrainingConfig:
+        config = self.config.model_trainer
+        params = self.params.ElasticNet
+        schema = self.schema.TARGET
+
+        create_directories([config.root_dir])
+
+        model_training_config = ModelTrainingConfig(root_dir=config.root_dir,
+                                                    train_data_path=config.train_data_path,
+                                                    test_data_path=config.test_data_path,
+                                                    model_name=config.model_name,
+                                                    alpha=params.alpha,
+                                                    l1_ratio=params.l1_ratio,
+                                                    target_column=schema.name, )
+        return model_training_config
+
