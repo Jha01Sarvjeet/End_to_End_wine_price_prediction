@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/Father%27s_Document/code/MlOps_project/End_to_End_wine_price_prediction/mlruns/0/36b23157849340769a997f2d2d5e92cf/artifacts
+end_time: 1751354774529
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 36b23157849340769a997f2d2d5e92cf
+run_name: amazing-carp-437
+run_uuid: 36b23157849340769a997f2d2d5e92cf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751354771941
+status: 3
+tags: []
+user_id: Sarvjeet jha
