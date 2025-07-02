@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wine Quality Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Wine Quality Prediction</h1>
+
+<form method="POST" action="/predict">
+    <label for="residual_sugar">Residual Sugar</label>
+    <input type="number" step="any" name="residual_sugar" required>
+
+    <label for="chlorides">Chlorides</label>
+    <input type="number" step="any" name="chlorides" required>
+
+    <label for="free_sulfur_dioxide">Free Sulfur Dioxide</label>
+    <input type="number" step="any" name="free_sulfur_dioxide" required>
+
+    <label for="total_sulfur_dioxide">Total Sulfur Dioxide</label>
+    <input type="number" step="any" name="total_sulfur_dioxide" required>
+
+    <label for="density">Density</label>
+    <input type="number" step="any" name="density" required>
+
+    <label for="pH">pH</label>
+    <input type="number" step="any" name="pH" required>
+
+    <label for="sulphates">Sulphates</label>
+    <input type="number" step="any" name="sulphates" required>
+
+    <label for="alcohol">Alcohol</label>
+    <input type="number" step="any" name="alcohol" required>
+
+    <input type="submit" value="PredictQuality">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Wine Quality Prediction</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f9f9f9;
+                text-align: center;
+                padding-top: 50px;
+            }
+
+            .result-box {
+                display: inline-block;
+                padding: 30px 40px;
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            }
+
+            h1 {
+                color: #4CAF50;
+            }
+
+            a {
+                margin-top: 20px;
+                display: inline-block;
+                text-decoration: none;
+                color: white;
+                background-color: #4CAF50;
+                padding: 10px 20px;
+                border-radius: 5px;
+            }
+
+            a:hover {
+                background-color: #45a049;
+            }
+        </style>
+    </head>
+    <body>
+
+    <div class="result-box">
+        <h1>Predicted Wine Quality:</h1>
+        <h2>{{ predict }}</h2>
+        <a href="/">Go Back</a>
+    </div>
+
+    </body>
+    </html>

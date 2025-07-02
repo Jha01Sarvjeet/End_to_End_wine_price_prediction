@@ -1,0 +1,108 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wine Quality Predictor</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(120deg, #e0f7fa, #e1bee7);
+        }
+        .container {
+            text-align: center;
+            padding: 80px 20px;
+        }
+        h1 {
+            font-size: 3em;
+            color: #4A148C;
+        }
+        p {
+            font-size: 1.2em;
+            color: #333;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+        .btn {
+            padding: 15px 30px;
+            margin: 20px;
+            font-size: 18px;
+            background-color: #6A1B9A;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .btn:hover {
+            background-color: #8E24AA;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container" data-aos="zoom-in">
+        <h1>🍷 Wine Quality Prediction</h1>
+        <p>
+            This ML model predicts the quality of wine based on chemical properties like acidity, sugar, alcohol content, etc.
+            Train the model and test with your own values to explore the results.
+        </p>
+        <a href="/train"><button class="btn">🚀 Train Model</button></a>
+        <a href="/predict"><button class="btn">🔮 Make a Prediction</button></a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wine Quality Prediction - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home_style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero-section">
+        <div class="container">
+            <h1>Welcome to the Wine Quality Prediction App</h1>
+            <p>This intelligent system uses machine learning to evaluate and predict the quality of wine based on its chemical properties. Powered by data science and trained on real datasets, our tool helps wine makers, distributors, and enthusiasts understand the potential of their wine quality with ease and precision.</p>
+            <div class="buttons">
+                <a href="/train">Train Model</a>
+                <a href="/predict">Predict Wine Quality</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="features-section">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>📊 Machine Learning Model</h3>
+                    <p>Utilizes powerful regression techniques to analyze wine features and estimate its quality score.</p>
+                </div>
+                <div class="feature">
+                    <h3>⚙️ On-Demand Training</h3>
+                    <p>Train the model with a single click. Your model is always fresh and up-to-date with the latest data.</p>
+                </div>
+                <div class="feature">
+                    <h3>🎯 Accurate Predictions</h3>
+                    <p>Get precise wine quality scores based on inputs like pH, alcohol content, sulphates, and more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Made with ❤️ for wine lovers & data science enthusiasts | AIML Project 2025</p>
+    </footer>
+</body>
+</html>
